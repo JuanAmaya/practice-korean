@@ -1,0 +1,572 @@
+[
+  {
+    "verb": "가다",
+    "definition": "to go",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "가"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "가요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "갑니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "갔어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "갔어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "갔습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "갈 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "갈 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "갈 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "오다",
+    "definition": "to come",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "와"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "와요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "옵니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "왔어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "왔어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "왔습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "올 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "올 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "올 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "마시다",
+    "definition": "to drink",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "마셔"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "마셔요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "마십니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "마셨어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "마셨어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "마셨습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "마실 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "마실 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "마실 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "먹다",
+    "definition": "to eat",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "먹어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "먹어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "먹습니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "먹었어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "먹었어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "먹었습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "먹을 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "먹을 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "먹을 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "주다",
+    "definition": "to give",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "줘"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "줘요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "줍니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "줬어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "줬어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "줬습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "줄 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "줄 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "줄 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "듣다",
+    "definition": "to hear",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "들어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "들어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "듣습니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "들었어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "들었어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "들었습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "들을 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "들을 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "들을 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "배우다",
+    "definition": "to learn",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "배워"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "배워요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "배웁니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "배웠어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "배웠어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "배웠습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "배울 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "배울 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "배울 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "만들다",
+    "definition": "to make",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "만들어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "만들어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "만듭니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "만들었어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "만들었어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "만들었습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "만들 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "만들 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "만들 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "앉다",
+    "definition": "to sit",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "앉아"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "앉아요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "앉습니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "앉았어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "앉았어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "앉았습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "앉을 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "앉을 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "앉을 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "자다",
+    "definition": "to sleep",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "자"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "자요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "잡니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "잤어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "잤어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "잤습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "잘 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "잘 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "잘 겁니다"
+          }
+        ]
+      }
+    ]
+  }
+]
