@@ -1,10 +1,9 @@
-import Button from "./UI/Button";
 import VERBS from "../data/VERBS.json";
 import { useEffect, useState } from "react";
-import HappyFace from "../assets/HappyFace";
-import SadFace from "../assets/SadFace";
+import ResultsSCT from "./UI/ResultsSCT";
+import Input from "./UI/Input";
 
-type Conjugations = {
+export type Conjugations = {
   politenessLevel: string;
   conjugation: string;
 };
@@ -33,8 +32,8 @@ export default function VerbsPage() {
     setInputTxt("");
 
     let randNumVerb = Math.floor(Math.random() * VERBS.length);
-    let randNumTense = Math.floor(Math.random() * 2);
-    let randNumPoliteness = Math.floor(Math.random() * 2);
+    let randNumTense = Math.floor(Math.random() * 3);
+    let randNumPoliteness = Math.floor(Math.random() * 3);
 
     setSelectedVerb(VERBS[randNumVerb]);
     setSelectedTense(VERBS[randNumVerb].vocabulary[randNumTense]);
@@ -49,17 +48,13 @@ export default function VerbsPage() {
     if (e.key !== "Enter") return;
 
     if (e.target.value === selectedPoliteness?.conjugation) {
-      console.log("Correct");
       setRightAnswer(true);
+      console.log("Correct");
     } else {
-      console.log("Incorrect");
       setRightAnswer(false);
+      console.log("Incorrect");
     }
     e.target.blur();
-  };
-
-  const handleInput = (e: any) => {
-    setInputTxt(e.target.value);
   };
 
   return (
@@ -80,44 +75,18 @@ export default function VerbsPage() {
         )}
       </div>
 
-      <div className="max-w-screen-sm mx-auto mt-8">
-        <input
-          type="text"
-          className="border-2 rounded-md border-brownKRN text-2xl px-2 py-1 bg-transparent w-full text-center placeholder:text-brownKRN/60"
-          placeholder="Write here"
-          onKeyDown={checkUserAnswer}
-          onInput={handleInput}
-          disabled={rightAnswer !== undefined}
-          value={inputTxt}
-        />
-      </div>
+      <Input
+        setInputTxt={setInputTxt}
+        inputTxt={inputTxt}
+        rightAnswer={rightAnswer}
+        checkUserAnswer={checkUserAnswer}
+      />
 
-      <div className="max-w-screen-sm mx-auto">
-        {rightAnswer && (
-          <div className="flex flex-col items-center p-8">
-            <HappyFace styles={"text-greenKRN"} />
-            <span className="uppercase text-greenKRN font-semibold text-3xl">
-              Correct!
-            </span>
-          </div>
-        )}
-        {rightAnswer === false && (
-          <div className="flex flex-col items-center p-8">
-            <SadFace styles={"text-redKRN"} />
-            <span className="uppercase text-redKRN font-semibold text-3xl">
-              Wrong
-            </span>
-            <div className="flex flex-col text-center mt-2">
-              <span className="text-2xl">The answer was</span>
-              <span className="text-2xl font-bold">
-                {selectedPoliteness?.conjugation}
-              </span>
-            </div>
-          </div>
-        )}
-
-        {rightAnswer !== undefined && <Button setChangeVerb={setChangeVerb} />}
-      </div>
+      <ResultsSCT
+        rightAnswer={rightAnswer}
+        selectedPoliteness={selectedPoliteness!}
+        setChangeVerb={setChangeVerb}
+      />
     </div>
   );
 }
