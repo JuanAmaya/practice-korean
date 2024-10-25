@@ -26,9 +26,12 @@ export default function VerbsPage() {
   const [selectedPoliteness, setSelectedPoliteness] = useState<Conjugations>();
   const [rightAnswer, setRightAnswer] = useState<boolean>();
   const [changeVerb, setChangeVerb] = useState(0);
+  const [inputTxt, setInputTxt] = useState("");
 
   useEffect(() => {
     setRightAnswer(undefined);
+    setInputTxt("");
+
     let randNumVerb = Math.floor(Math.random() * VERBS.length);
     let randNumTense = Math.floor(Math.random() * 2);
     let randNumPoliteness = Math.floor(Math.random() * 2);
@@ -52,6 +55,11 @@ export default function VerbsPage() {
       console.log("Incorrect");
       setRightAnswer(false);
     }
+    e.target.blur();
+  };
+
+  const handleInput = (e: any) => {
+    setInputTxt(e.target.value);
   };
 
   return (
@@ -72,7 +80,19 @@ export default function VerbsPage() {
         )}
       </div>
 
-      <div className="min-h-72">
+      <div className="max-w-screen-sm mx-auto mt-8">
+        <input
+          type="text"
+          className="border-2 rounded-md border-brownKRN text-2xl px-2 py-1 bg-transparent w-full text-center placeholder:text-brownKRN/60"
+          placeholder="Write here"
+          onKeyDown={checkUserAnswer}
+          onInput={handleInput}
+          disabled={rightAnswer !== undefined}
+          value={inputTxt}
+        />
+      </div>
+
+      <div className="max-w-screen-sm mx-auto">
         {rightAnswer && (
           <div className="flex flex-col items-center p-8">
             <HappyFace styles={"text-greenKRN"} />
@@ -95,16 +115,6 @@ export default function VerbsPage() {
             </div>
           </div>
         )}
-      </div>
-
-      <div className="flex flex-col gap-4 max-w-screen-sm mx-auto">
-        <input
-          type="text"
-          className="border-2 rounded-md border-brownKRN text-2xl px-2 py-1 bg-transparent w-full text-center placeholder:text-brownKRN/60"
-          placeholder="Write here"
-          onKeyDown={checkUserAnswer}
-          disabled={rightAnswer !== undefined}
-        />
 
         {rightAnswer !== undefined && <Button setChangeVerb={setChangeVerb} />}
       </div>

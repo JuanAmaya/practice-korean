@@ -10,7 +10,7 @@ export default function HappyFace({ styles }: HappyFaceProps) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={`size-28 ${styles}`}
+      className={`size-14 ${styles}`}
     >
       <path
         strokeLinecap="round"
