@@ -2,6 +2,7 @@ import VERBS from "../data/VERBS.json";
 import { useEffect, useState } from "react";
 import ResultsSCT from "./UI/ResultsSCT";
 import Input from "./UI/Input";
+import VerbsSettings from "./VerbsSettings";
 
 export type Conjugations = {
   politenessLevel: string;
@@ -26,15 +27,65 @@ export default function VerbsPage() {
   const [rightAnswer, setRightAnswer] = useState<boolean>();
   const [changeVerb, setChangeVerb] = useState(0);
   const [inputTxt, setInputTxt] = useState("");
+  const [casualPoliteness, setCasualPoliteness] = useState(true);
+  const [politePoliteness, setPolitePoliteness] = useState(true);
+  const [formalPoliteness, setFormalPoliteness] = useState(true);
+  const [pastTense, setPastTense] = useState(true);
+  const [presentTense, setPresentTense] = useState(true);
+  const [futureTense, setFutureTense] = useState(true);
 
   useEffect(() => {
     setRightAnswer(undefined);
     setInputTxt("");
 
     let randNumVerb = Math.floor(Math.random() * VERBS.length);
-    let randNumTense = Math.floor(Math.random() * 3);
-    let randNumPoliteness = Math.floor(Math.random() * 3);
+    let randNumTense = 0;
+    let randNumPoliteness = 0;
+    let num = 0;
 
+    if (pastTense && presentTense && futureTense) {
+      randNumTense = Math.floor(Math.random() * 3);
+    } else if (pastTense && !presentTense && !futureTense) {
+      randNumTense = 0;
+    } else if (!pastTense && presentTense && !futureTense) {
+      randNumTense = 1;
+    } else if (!pastTense && !presentTense && futureTense) {
+      randNumTense = 2;
+    } else if (pastTense && presentTense && !futureTense) {
+      randNumTense = Math.floor(Math.random() * 2);
+    } else if (pastTense && !presentTense && futureTense) {
+      num = Math.floor(Math.random() * 2);
+      if (num === 0) {
+        randNumTense = 0;
+      } else {
+        randNumTense = 2;
+      }
+    } else if (!pastTense && presentTense && futureTense) {
+      randNumTense = Math.floor(Math.random() * 2) + 1;
+    }
+
+    if (casualPoliteness && politePoliteness && formalPoliteness) {
+      randNumPoliteness = Math.floor(Math.random() * 3);
+    } else if (casualPoliteness && !politePoliteness && !formalPoliteness) {
+      randNumPoliteness = 0;
+    } else if (!casualPoliteness && politePoliteness && !formalPoliteness) {
+      randNumPoliteness = 1;
+    } else if (!casualPoliteness && !politePoliteness && formalPoliteness) {
+      randNumPoliteness = 2;
+    } else if (casualPoliteness && politePoliteness && !formalPoliteness) {
+      randNumPoliteness = Math.floor(Math.random() * 2);
+    } else if (casualPoliteness && !politePoliteness && formalPoliteness) {
+      num = Math.floor(Math.random() * 2);
+      if (num === 0) {
+        randNumPoliteness = 0;
+      } else {
+        randNumPoliteness = 2;
+      }
+    } else if (!casualPoliteness && politePoliteness && formalPoliteness) {
+      randNumPoliteness = Math.floor(Math.random() * 2) + 1;
+    }
+
+    console.log("numero", randNumTense);
     setSelectedVerb(VERBS[randNumVerb]);
     setSelectedTense(VERBS[randNumVerb].vocabulary[randNumTense]);
     setSelectedPoliteness(
@@ -42,7 +93,15 @@ export default function VerbsPage() {
         randNumPoliteness
       ]
     );
-  }, [changeVerb]);
+  }, [
+    changeVerb,
+    casualPoliteness,
+    politePoliteness,
+    formalPoliteness,
+    pastTense,
+    presentTense,
+    futureTense,
+  ]);
 
   const checkUserAnswer = (e: any) => {
     if (e.key !== "Enter") return;
@@ -58,7 +117,22 @@ export default function VerbsPage() {
   };
 
   return (
-    <div className="m-8 pt-12">
+    <div className="m-8 pt-6">
+      <VerbsSettings
+        casualPoliteness={casualPoliteness}
+        politePoliteness={politePoliteness}
+        formalPoliteness={formalPoliteness}
+        setCasualPoliteness={setCasualPoliteness}
+        setPolitePoliteness={setPolitePoliteness}
+        setFormalPoliteness={setFormalPoliteness}
+        pastTense={pastTense}
+        presentTense={presentTense}
+        futureTense={futureTense}
+        setPastTense={setPastTense}
+        setPresentTense={setPresentTense}
+        setFutureTense={setFutureTense}
+      />
+
       {selectedVerb !== undefined && (
         <div className="flex flex-col items-center">
           <span className="text-6xl font-bold">{selectedVerb.verb}</span>
