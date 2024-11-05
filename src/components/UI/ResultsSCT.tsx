@@ -1,5 +1,3 @@
-import HappyFace from "../../assets/HappyFace";
-import SadFace from "../../assets/SadFace";
 import { Conjugations } from "../VerbsPage";
 import Button from "./Button";
 import { AnimatePresence, motion } from "framer-motion";

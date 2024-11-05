@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ResultsSCT from "./UI/ResultsSCT";
 import Input from "./UI/Input";
 import VerbsSettings from "./VerbsSettings";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export type Conjugations = {
   politenessLevel: string;
