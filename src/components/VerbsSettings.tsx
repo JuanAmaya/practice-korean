@@ -1,6 +1,8 @@
 import { useState } from "react";
 import SettingsTooth from "../assets/SettingsTooth";
 import SettingOptions from "./UI/SettingOptions";
+import { AnimatePresence, motion } from "framer-motion";
+import XMark from "../assets/XMark";
 
 type VerbsSettingsProps = {
   casualPoliteness: boolean;
@@ -77,7 +79,11 @@ export default function VerbsSettings({
 
   return (
     <>
-      <div className="flex justify-end mb-4">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="flex justify-center items-center"
+      >
         <button
           onClick={() => setShowSettings((prev) => !prev)}
           className={`border-2 border-brownKRN rounded-md hover:bg-brownKRN transition-colors ${
@@ -90,15 +96,41 @@ export default function VerbsSettings({
             }`}
           />
         </button>
-      </div>
+      </motion.div>
 
-      {showSettings && (
-        <div className="bg-whiteKRN border-2 border-brownKRN rounded-md flex justify-around max-w-lg mx-auto mb-4">
-          <SettingOptions title="Politeness" optionsData={POLITENESS} />
-          <div className="w-1 bg-brownKRN m-4" />
-          <SettingOptions title="Tense" optionsData={TENSE} />
-        </div>
-      )}
+      <AnimatePresence>
+        {showSettings && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              key={"modal"}
+              className="fixed left-0 top-0 w-screen h-screen bg-black/40 z-10"
+              onClick={() => setShowSettings(false)}
+            />
+            <motion.div
+              initial={{ y: 400 }}
+              animate={{ y: 0 }}
+              exit={{ y: 400 }}
+              key={"settings"}
+              className="bg-whiteKRN border-t-2 border-brownKRN fixed bottom-0 left-0 w-screen pb-8 z-20"
+            >
+              <div className="flex justify-between p-2 mx-auto max-w-2xl px-7">
+                <span className="text-2xl font-bold">Settings</span>
+                <button onClick={() => setShowSettings(false)}>
+                  <XMark />
+                </button>
+              </div>
+              <div className="flex justify-around max-w-xl mx-auto">
+                <SettingOptions title="Politeness" optionsData={POLITENESS} />
+                <div className="w-1 bg-brownKRN m-4" />
+                <SettingOptions title="Tense" optionsData={TENSE} />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }

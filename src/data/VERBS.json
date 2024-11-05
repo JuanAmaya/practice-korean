@@ -5128,5 +5128,404 @@
         ]
       }
     ]
+  },
+  {
+    "verb": "대답하다",
+    "definition": "to answer",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "대답해"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "대답해요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "대답합니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "대답했어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "대답했어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "대답했습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "대답할 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "대답할 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "대답할 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "출발하다",
+    "definition": "to depart",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "출발해"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "출발해요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "출발합니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "출발했어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "출발했어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "출발했습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "출발할 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "출발할 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "출발할 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "도착하다",
+    "definition": "to arrive",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "도착해"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "도착해요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "도착합니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "도착했어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "도착했어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "도착했습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "도착할 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "도착할 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "도착할 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "벗다",
+    "definition": "to undress, take off clothes",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "벗어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "벗어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "벗습니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "벗었어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "벗었어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "벗었습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "벗을 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "벗을 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "벗을 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "지다",
+    "definition": "to lose, be defeated",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "져"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "져요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "집니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "졌어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "졌어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "졌습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "질 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "질 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "질 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "서두르다",
+    "definition": "to hurry, rush",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "서둘러"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "서둘러요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "서두릅니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "서둘렀어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "서둘렀어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "서둘렀습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "서두를 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "서두를 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "서두를 겁니다"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "verb": "사랑에 빠지다",
+    "definition": "to fall in love",
+    "vocabulary": [
+      {
+        "tense": "present",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "사랑에 빠져"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "사랑에 빠져요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "사랑에 빠집니다"
+          }
+        ]
+      },
+      {
+        "tense": "past",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "사랑에 빠졌어"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "사랑에 빠졌어요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "사랑에 빠졌습니다"
+          }
+        ]
+      },
+      {
+        "tense": "future",
+        "conjugations": [
+          {
+            "politenessLevel": "casual",
+            "conjugation": "사랑에 빠질 거야"
+          },
+          {
+            "politenessLevel": "polite",
+            "conjugation": "사랑에 빠질 거예요"
+          },
+          {
+            "politenessLevel": "formal",
+            "conjugation": "사랑에 빠질 겁니다"
+          }
+        ]
+      }
+    ]
   }
 ]

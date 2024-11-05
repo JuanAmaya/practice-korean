@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ResultsSCT from "./UI/ResultsSCT";
 import Input from "./UI/Input";
 import VerbsSettings from "./VerbsSettings";
+import { AnimatePresence, motion } from "framer-motion";
 
 export type Conjugations = {
   politenessLevel: string;
@@ -46,9 +47,9 @@ export default function VerbsPage() {
     if (pastTense && presentTense && futureTense) {
       randNumTense = Math.floor(Math.random() * 3);
     } else if (pastTense && !presentTense && !futureTense) {
-      randNumTense = 0;
-    } else if (!pastTense && presentTense && !futureTense) {
       randNumTense = 1;
+    } else if (!pastTense && presentTense && !futureTense) {
+      randNumTense = 0;
     } else if (!pastTense && !presentTense && futureTense) {
       randNumTense = 2;
     } else if (pastTense && presentTense && !futureTense) {
@@ -62,6 +63,8 @@ export default function VerbsPage() {
       }
     } else if (!pastTense && presentTense && futureTense) {
       randNumTense = Math.floor(Math.random() * 2) + 1;
+    } else if (!pastTense && !presentTense && !futureTense) {
+      setPastTense(true);
     }
 
     if (casualPoliteness && politePoliteness && formalPoliteness) {
@@ -83,9 +86,10 @@ export default function VerbsPage() {
       }
     } else if (!casualPoliteness && politePoliteness && formalPoliteness) {
       randNumPoliteness = Math.floor(Math.random() * 2) + 1;
+    } else if (!casualPoliteness && !politePoliteness && !formalPoliteness) {
+      setCasualPoliteness(true);
     }
 
-    console.log("numero", randNumTense);
     setSelectedVerb(VERBS[randNumVerb]);
     setSelectedTense(VERBS[randNumVerb].vocabulary[randNumTense]);
     setSelectedPoliteness(
@@ -117,7 +121,52 @@ export default function VerbsPage() {
   };
 
   return (
-    <div className="m-8 pt-6">
+    <div className="m-8 pt-6 h-screen grid max-h-screen items-start">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        {selectedVerb !== undefined && (
+          <motion.div
+            key={selectedVerb.verb}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="flex flex-col items-center text-center"
+          >
+            <span className="text-6xl font-bold">{selectedVerb.verb}</span>
+            <span className="text-4xl">
+              &#40;{selectedVerb.definition}&#41;
+            </span>
+          </motion.div>
+        )}
+
+        <div className="pt-6 flex flex-col items-center text-center">
+          <span className="text-2xl">Conjugate the verb in</span>
+          {selectedPoliteness !== undefined && selectedTense !== undefined && (
+            <motion.span
+              key={selectedTense.tense}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="font-bold text-2xl capitalize"
+            >
+              {selectedPoliteness.politenessLevel} {selectedTense.tense}
+            </motion.span>
+          )}
+        </div>
+
+        <Input
+          setInputTxt={setInputTxt}
+          inputTxt={inputTxt}
+          rightAnswer={rightAnswer}
+          checkUserAnswer={checkUserAnswer}
+        />
+
+        <ResultsSCT
+          rightAnswer={rightAnswer}
+          selectedPoliteness={selectedPoliteness!}
+          setChangeVerb={setChangeVerb}
+        />
+      </motion.div>
+
       <VerbsSettings
         casualPoliteness={casualPoliteness}
         politePoliteness={politePoliteness}
@@ -131,35 +180,6 @@ export default function VerbsPage() {
         setPastTense={setPastTense}
         setPresentTense={setPresentTense}
         setFutureTense={setFutureTense}
-      />
-
-      {selectedVerb !== undefined && (
-        <div className="flex flex-col items-center">
-          <span className="text-6xl font-bold">{selectedVerb.verb}</span>
-          <span className="text-4xl">&#40;{selectedVerb.definition}&#41;</span>
-        </div>
-      )}
-
-      <div className="pt-6 flex flex-col items-center text-center">
-        <span className="text-2xl">Conjugate the verb in</span>
-        {selectedPoliteness !== undefined && selectedTense !== undefined && (
-          <span className="font-bold text-2xl capitalize">
-            {selectedPoliteness.politenessLevel} {selectedTense.tense}
-          </span>
-        )}
-      </div>
-
-      <Input
-        setInputTxt={setInputTxt}
-        inputTxt={inputTxt}
-        rightAnswer={rightAnswer}
-        checkUserAnswer={checkUserAnswer}
-      />
-
-      <ResultsSCT
-        rightAnswer={rightAnswer}
-        selectedPoliteness={selectedPoliteness!}
-        setChangeVerb={setChangeVerb}
       />
     </div>
   );
