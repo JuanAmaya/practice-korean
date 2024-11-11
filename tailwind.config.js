@@ -11,6 +11,9 @@ export default {
         redKRN: "#C32525",
         brownKRN: "#4f453b",
         whiteKRN: "#eceae5"
+      },
+      borderWidth: {
+        3: "3px"
       }
     },
   },

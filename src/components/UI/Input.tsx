@@ -19,7 +19,7 @@ export default function Input({
     <div className="max-w-screen-sm mx-auto mt-8">
       <input
         type="text"
-        className="border-2 rounded-md border-brownKRN text-2xl px-2 py-1 bg-transparent w-full text-center placeholder:text-brownKRN/60"
+        className="border-3 rounded-md border-brownKRN text-2xl px-2 py-1 bg-transparent w-full text-center placeholder:text-brownKRN/60"
         placeholder="Write here"
         onKeyDown={checkUserAnswer}
         onInput={handleInput}

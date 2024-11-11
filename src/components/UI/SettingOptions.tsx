@@ -21,28 +21,6 @@ export default function SettingOptions({
         {optionsData.map((level) => (
           <button
             onClick={() => {
-              //   if (
-              //     !casualPoliteness &&
-              //     !politePoliteness &&
-              //     formalPoliteness &&
-              //     level.name == "Formal"
-              //   )
-              //     return;
-              //   if (
-              //     !casualPoliteness &&
-              //     politePoliteness &&
-              //     !formalPoliteness &&
-              //     level.name === "Polite"
-              //   )
-              //     return;
-              //   if (
-              //     casualPoliteness &&
-              //     !politePoliteness &&
-              //     !formalPoliteness &&
-              //     level.name === "Casual"
-              //   )
-              //     return;
-
               level.setPoliteness((prev) => !prev);
             }}
             className={`border-2 border-brownKRN rounded-md transition-colors ${

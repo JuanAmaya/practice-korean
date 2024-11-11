@@ -1,0 +1,30 @@
+[
+  {
+    "dayENG": "sunday",
+    "dayKRN": "일요일"
+  },
+  {
+    "dayENG": "monday",
+    "dayKRN": "월요일"
+  },
+  {
+    "dayENG": "tuesday",
+    "dayKRN": "화요일"
+  },
+  {
+    "dayENG": "wednesday",
+    "dayKRN": "수요일"
+  },
+  {
+    "dayENG": "thursday",
+    "dayKRN": "목요일"
+  },
+  {
+    "dayENG": "friday",
+    "dayKRN": "금요일"
+  },
+  {
+    "dayENG": "saturday",
+    "dayKRN": "토요일"
+  }
+]

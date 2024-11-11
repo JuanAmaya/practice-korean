@@ -1,9 +1,10 @@
-import VERBS from "../data/VERBS.json";
+import VERBS from "../../data/VERBS.json";
 import { useEffect, useState } from "react";
-import ResultsSCT from "./UI/ResultsSCT";
-import Input from "./UI/Input";
-import VerbsSettings from "./VerbsSettings";
+import Input from "../UI/Input";
+import VerbsSettings from "../Settings/VerbsSettings";
 import { motion } from "framer-motion";
+import HomeBtn from "../UI/HomeBtn";
+import Results from "../UI/Results";
 
 export type Conjugations = {
   politenessLevel: string;
@@ -160,27 +161,30 @@ export default function VerbsPage() {
           checkUserAnswer={checkUserAnswer}
         />
 
-        <ResultsSCT
+        <Results
           rightAnswer={rightAnswer}
-          selectedPoliteness={selectedPoliteness!}
-          setChangeVerb={setChangeVerb}
+          answer={selectedPoliteness?.conjugation}
+          setChange={setChangeVerb}
         />
       </motion.div>
 
-      <VerbsSettings
-        casualPoliteness={casualPoliteness}
-        politePoliteness={politePoliteness}
-        formalPoliteness={formalPoliteness}
-        setCasualPoliteness={setCasualPoliteness}
-        setPolitePoliteness={setPolitePoliteness}
-        setFormalPoliteness={setFormalPoliteness}
-        pastTense={pastTense}
-        presentTense={presentTense}
-        futureTense={futureTense}
-        setPastTense={setPastTense}
-        setPresentTense={setPresentTense}
-        setFutureTense={setFutureTense}
-      />
+      <div className="flex justify-center gap-8">
+        <HomeBtn />
+        <VerbsSettings
+          casualPoliteness={casualPoliteness}
+          politePoliteness={politePoliteness}
+          formalPoliteness={formalPoliteness}
+          setCasualPoliteness={setCasualPoliteness}
+          setPolitePoliteness={setPolitePoliteness}
+          setFormalPoliteness={setFormalPoliteness}
+          pastTense={pastTense}
+          presentTense={presentTense}
+          futureTense={futureTense}
+          setPastTense={setPastTense}
+          setPresentTense={setPresentTense}
+          setFutureTense={setFutureTense}
+        />
+      </div>
     </div>
   );
 }

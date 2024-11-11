@@ -1,10 +1,10 @@
 type ButtonProps = {
-  setChangeVerb: React.Dispatch<React.SetStateAction<number>>;
+  setChange: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export default function Button({ setChangeVerb }: ButtonProps) {
+export default function Button({ setChange }: ButtonProps) {
   const handleNextVerb = () => {
-    setChangeVerb((prev) => prev + 1);
+    setChange((prev) => prev + 1);
   };
 
   return (

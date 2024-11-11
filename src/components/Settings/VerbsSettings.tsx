@@ -1,8 +1,8 @@
 import { useState } from "react";
-import SettingsTooth from "../assets/SettingsTooth";
-import SettingOptions from "./UI/SettingOptions";
+import SettingsTooth from "../../assets/SettingsTooth";
+import SettingOptions from "../UI/SettingOptions";
 import { AnimatePresence, motion } from "framer-motion";
-import XMark from "../assets/XMark";
+import XMark from "../../assets/XMark";
 
 type VerbsSettingsProps = {
   casualPoliteness: boolean;
@@ -86,7 +86,7 @@ export default function VerbsSettings({
       >
         <button
           onClick={() => setShowSettings((prev) => !prev)}
-          className={`border-2 border-brownKRN rounded-md hover:bg-brownKRN transition-colors ${
+          className={`border-3 border-brownKRN rounded-md hover:bg-brownKRN transition-colors p-1 ${
             showSettings ? "bg-brownKRN" : "bg-whiteKRN"
           }`}
         >
