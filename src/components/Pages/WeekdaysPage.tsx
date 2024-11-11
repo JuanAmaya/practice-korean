@@ -38,6 +38,8 @@ export default function WeekdaysPage() {
         setRightAnswer(false);
       }
     }
+
+    e.target.blur();
   };
 
   return (
