@@ -13,7 +13,7 @@ export default function SelectionPageBtn({
 }: SelectionPageBtnProps) {
   return (
     <Link to={url}>
-      <div className="text-brownKRN text-3xl border-3 border-brownKRN rounded-md py-2 max-w-md mx-auto px-8">
+      <div className="text-brownKRN text-3xl border-3 border-brownKRN rounded-md py-2 max-w-md mx-auto px-8 transition-colors hover:bg-brownKRN hover:text-whiteKRN">
         <span className="pr-12">{iconTXT}</span>
         <span className="font-medium">{title}</span>
       </div>

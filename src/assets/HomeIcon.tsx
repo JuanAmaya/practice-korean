@@ -1,5 +1,5 @@
 type HomeIconProps = {
-  styles: string;
+  styles?: string;
 };
 
 export default function HomeIcon({ styles }: HomeIconProps) {

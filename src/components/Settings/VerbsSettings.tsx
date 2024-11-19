@@ -19,6 +19,24 @@ type VerbsSettingsProps = {
   setFutureTense: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+const opacityVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
+const settingsVariants = {
+  hidden: {
+    y: 400,
+  },
+  visible: {
+    y: 0,
+  },
+};
+
 export default function VerbsSettings({
   casualPoliteness,
   politePoliteness,
@@ -79,40 +97,34 @@ export default function VerbsSettings({
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="flex justify-center items-center"
-      >
+      <div className="flex justify-center items-center">
         <button
           onClick={() => setShowSettings((prev) => !prev)}
-          className={`border-3 border-brownKRN rounded-md hover:bg-brownKRN transition-colors p-1 ${
+          className={`border-3 border-brownKRN rounded-md hover:bg-brownKRN transition-colors p-1 hover:text-whiteKRN ${
             showSettings ? "bg-brownKRN" : "bg-whiteKRN"
           }`}
         >
-          <SettingsTooth
-            styles={`hover:text-whiteKRN transition-colors ${
-              showSettings ? "text-whiteKRN" : "text-brownKRN"
-            }`}
-          />
+          <SettingsTooth />
         </button>
-      </motion.div>
+      </div>
 
       <AnimatePresence>
         {showSettings && (
           <>
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              variants={opacityVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
               key={"modal"}
               className="fixed left-0 top-0 w-screen h-screen bg-black/40 z-10"
               onClick={() => setShowSettings(false)}
             />
             <motion.div
-              initial={{ y: 400 }}
-              animate={{ y: 0 }}
-              exit={{ y: 400 }}
+              variants={settingsVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
               key={"settings"}
               className="bg-whiteKRN border-t-2 border-brownKRN fixed bottom-0 left-0 w-screen pb-8 z-20"
             >

@@ -5,6 +5,7 @@ import VerbsSettings from "../Settings/VerbsSettings";
 import { motion } from "framer-motion";
 import HomeBtn from "../UI/HomeBtn";
 import Results from "../UI/Results";
+import PageWrapper from "../UI/PageWrapper";
 
 export type Conjugations = {
   politenessLevel: string;
@@ -122,7 +123,7 @@ export default function VerbsPage() {
   };
 
   return (
-    <div className="m-8 pt-6 h-screen grid max-h-screen items-start">
+    <PageWrapper>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         {selectedVerb !== undefined && (
           <motion.div
@@ -185,6 +186,6 @@ export default function VerbsPage() {
           setFutureTense={setFutureTense}
         />
       </div>
-    </div>
+    </PageWrapper>
   );
 }

@@ -14,7 +14,13 @@ export default function LandingPage() {
         <SelectionPageBtn
           iconTXT="1"
           title="Pure Numbers"
-          url="/practice-korean/numbers"
+          url="/practice-korean/pure-numbers"
+        />
+
+        <SelectionPageBtn
+          iconTXT="2"
+          title="Sino Numbers"
+          url="/practice-korean/sino-numbers"
         />
 
         <SelectionPageBtn

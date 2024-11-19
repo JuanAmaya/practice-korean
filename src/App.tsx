@@ -7,6 +7,7 @@ import VerbsPage from "./components/Pages/VerbsPage";
 import LandingPage from "./components/Pages/LandingPage";
 import NumbersPage from "./components/Pages/NumbersPage";
 import WeekdaysPage from "./components/Pages/WeekdaysPage";
+import SinoNumbersPage from "./components/Pages/SinoNumbersPage";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,12 @@ const router = createBrowserRouter([
     element: <VerbsPage />,
   },
   {
-    path: "/practice-korean/numbers",
+    path: "/practice-korean/pure-numbers",
     element: <NumbersPage />,
+  },
+  {
+    path: "/practice-korean/sino-numbers",
+    element: <SinoNumbersPage />,
   },
   {
     path: "/practice-korean/weekdays",

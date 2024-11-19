@@ -3,10 +3,13 @@ import SettingsTooth from "../../assets/SettingsTooth";
 import XMark from "../../assets/XMark";
 import SwitchOption from "./SwitchOption";
 import { AnimatePresence, motion } from "framer-motion";
+import DigitsOption from "./DigitsOption";
 
 type NumberSettingsProps = {
   answerInKorean: boolean;
   setAnswerInKorean: React.Dispatch<React.SetStateAction<boolean>>;
+  numDigits?: number;
+  setNumDigits?: (num: number) => void;
 };
 
 const ModalVariants = {
@@ -30,6 +33,8 @@ const SettingsVariants = {
 export default function NumbersSettings({
   answerInKorean,
   setAnswerInKorean,
+  numDigits,
+  setNumDigits,
 }: NumberSettingsProps) {
   const [showSettings, setShowSettings] = useState(false);
 
@@ -38,15 +43,11 @@ export default function NumbersSettings({
       <div className="flex justify-center items-center">
         <button
           onClick={() => setShowSettings((prev) => !prev)}
-          className={`border-3 border-brownKRN rounded-md hover:bg-brownKRN transition-colors p-1 ${
+          className={`border-3 border-brownKRN rounded-md hover:bg-brownKRN transition-colors p-1 hover:text-whiteKRN ${
             showSettings ? "bg-brownKRN" : "bg-whiteKRN"
           }`}
         >
-          <SettingsTooth
-            styles={`hover:text-whiteKRN transition-colors ${
-              showSettings ? "text-whiteKRN" : "text-brownKRN"
-            }`}
-          />
+          <SettingsTooth />
         </button>
       </div>
 
@@ -84,6 +85,12 @@ export default function NumbersSettings({
                   option2="Korean"
                 />
               </div>
+              {numDigits && (
+                <DigitsOption
+                  numDigits={numDigits}
+                  setNumDigits={setNumDigits!}
+                />
+              )}
             </motion.div>
           </>
         )}

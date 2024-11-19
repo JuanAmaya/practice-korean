@@ -1,5 +1,5 @@
 type SettingsToothProps = {
-  styles: string;
+  styles?: string;
 };
 
 export default function SettingsTooth({ styles }: SettingsToothProps) {

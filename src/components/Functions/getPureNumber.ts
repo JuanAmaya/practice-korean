@@ -1,7 +1,6 @@
 export const getPureNumber = (numPassed: number) => {
   let tenths = Math.floor(numPassed / 10);
   let oneFig = Math.floor(numPassed - tenths * 10);
-  console.log(numPassed);
   let pureNumber = "";
 
   switch (tenths) {

@@ -5,9 +5,9 @@ export default function HomeBtn() {
   return (
     <Link
       to={"/practice-korean/"}
-      className="border-3 border-brownKRN rounded-md hover:bg-brownKRN transition-colors p-1"
+      className="border-3 border-brownKRN rounded-md hover:bg-brownKRN transition-colors p-1 hover:text-whiteKRN"
     >
-      <HomeIcon styles={"hover:text-whiteKRN transition-colors"} />
+      <HomeIcon />
     </Link>
   );
 }

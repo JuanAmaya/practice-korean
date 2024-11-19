@@ -5,6 +5,7 @@ import HomeBtn from "../UI/HomeBtn";
 import NumbersSettings from "../Settings/NumbersSettings";
 import Input from "../UI/Input";
 import Results from "../UI/Results";
+import PageWrapper from "../UI/PageWrapper";
 
 export default function WeekdaysPage() {
   const [selectedDay, setSelectedDay] = useState(0);
@@ -43,7 +44,7 @@ export default function WeekdaysPage() {
   };
 
   return (
-    <div className="m-8 pt-6 h-screen grid max-h-screen items-start">
+    <PageWrapper>
       <div>
         <QuestionTitle
           answerInKorean={answerInKorean}
@@ -76,6 +77,6 @@ export default function WeekdaysPage() {
           setAnswerInKorean={setAnswerInKorean}
         />
       </div>
-    </div>
+    </PageWrapper>
   );
 }
