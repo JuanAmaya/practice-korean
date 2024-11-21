@@ -5,9 +5,9 @@ import {
 } from "react-router-dom";
 import VerbsPage from "./components/Pages/VerbsPage";
 import LandingPage from "./components/Pages/LandingPage";
-import NumbersPage from "./components/Pages/NumbersPage";
 import WeekdaysPage from "./components/Pages/WeekdaysPage";
 import SinoNumbersPage from "./components/Pages/SinoNumbersPage";
+import PureNumbersPage from "./components/Pages/PureNumbersPage";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/practice-korean/pure-numbers",
-    element: <NumbersPage />,
+    element: <PureNumbersPage />,
   },
   {
     path: "/practice-korean/sino-numbers",

@@ -58,10 +58,8 @@ export default function SinoNumbersPage() {
 
       if (userValue === selectedIntNumber) {
         setRightAnswer(true);
-        console.log("Correct");
       } else {
         setRightAnswer(false);
-        console.log("Incorrect");
       }
     }
 
@@ -88,6 +86,7 @@ export default function SinoNumbersPage() {
           rightAnswer={rightAnswer}
           answer={answerInKorean ? selectedSinoNumber : selectedIntNumber}
           setChange={setChangeNumber}
+          title="Number"
         />
       </div>
 

@@ -84,7 +84,5 @@ export const getSinoNumber = (numPassed: number) => {
     }
   }
 
-  console.log("num", numPassed);
-  console.log("sino", sinoNumber);
   return sinoNumber;
 };

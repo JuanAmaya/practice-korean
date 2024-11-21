@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SettingsTooth from "../../assets/SettingsTooth";
-import SettingOptions from "../UI/SettingOptions";
+import SettingOptions from "./SettingOptions";
 import { AnimatePresence, motion } from "framer-motion";
 import XMark from "../../assets/XMark";
 

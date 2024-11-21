@@ -7,7 +7,7 @@ import NumbersSettings from "../Settings/NumbersSettings";
 import QuestionTitle from "../UI/QuestionTitle";
 import PageWrapper from "../UI/PageWrapper";
 
-export default function NumbersPage() {
+export default function PureNumbersPage() {
   const [selectedPureNumber, setSelectedPureNumber] = useState<string>();
   const [selectedIntNumber, setSelectedIntNumber] = useState<number>();
   const [inputTxt, setInputTxt] = useState("");
@@ -42,10 +42,8 @@ export default function NumbersPage() {
 
       if (userNumber == selectedPureNumber) {
         setRightAnswer(true);
-        console.log("Correct");
       } else {
         setRightAnswer(false);
-        console.log("Incorrect");
       }
     }
 
@@ -72,6 +70,7 @@ export default function NumbersPage() {
           rightAnswer={rightAnswer}
           answer={answerInKorean ? selectedPureNumber : selectedIntNumber}
           setChange={setChangeNumber}
+          title="Number"
         />
       </div>
 

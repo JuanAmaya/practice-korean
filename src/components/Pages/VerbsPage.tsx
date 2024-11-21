@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import HomeBtn from "../UI/HomeBtn";
 import Results from "../UI/Results";
 import PageWrapper from "../UI/PageWrapper";
+import { getTensePoliteness } from "../Functions/getTensePoliteness";
 
 export type Conjugations = {
   politenessLevel: string;
@@ -21,6 +22,15 @@ type VerbType = {
   verb: string;
   definition: string;
   vocabulary: Vocabulary[];
+};
+
+const verbVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
 };
 
 export default function VerbsPage() {
@@ -44,53 +54,22 @@ export default function VerbsPage() {
     let randNumVerb = Math.floor(Math.random() * VERBS.length);
     let randNumTense = 0;
     let randNumPoliteness = 0;
-    let num = 0;
 
-    if (pastTense && presentTense && futureTense) {
-      randNumTense = Math.floor(Math.random() * 3);
-    } else if (pastTense && !presentTense && !futureTense) {
-      randNumTense = 1;
-    } else if (!pastTense && presentTense && !futureTense) {
-      randNumTense = 0;
-    } else if (!pastTense && !presentTense && futureTense) {
-      randNumTense = 2;
-    } else if (pastTense && presentTense && !futureTense) {
-      randNumTense = Math.floor(Math.random() * 2);
-    } else if (pastTense && !presentTense && futureTense) {
-      num = Math.floor(Math.random() * 2);
-      if (num === 0) {
-        randNumTense = 0;
-      } else {
-        randNumTense = 2;
-      }
-    } else if (!pastTense && presentTense && futureTense) {
-      randNumTense = Math.floor(Math.random() * 2) + 1;
-    } else if (!pastTense && !presentTense && !futureTense) {
-      setPastTense(true);
-    }
+    randNumTense = getTensePoliteness({
+      opt1: pastTense,
+      opt2: presentTense,
+      opt3: futureTense,
+      randNum: randNumTense,
+      setDefault: setPastTense,
+    });
 
-    if (casualPoliteness && politePoliteness && formalPoliteness) {
-      randNumPoliteness = Math.floor(Math.random() * 3);
-    } else if (casualPoliteness && !politePoliteness && !formalPoliteness) {
-      randNumPoliteness = 0;
-    } else if (!casualPoliteness && politePoliteness && !formalPoliteness) {
-      randNumPoliteness = 1;
-    } else if (!casualPoliteness && !politePoliteness && formalPoliteness) {
-      randNumPoliteness = 2;
-    } else if (casualPoliteness && politePoliteness && !formalPoliteness) {
-      randNumPoliteness = Math.floor(Math.random() * 2);
-    } else if (casualPoliteness && !politePoliteness && formalPoliteness) {
-      num = Math.floor(Math.random() * 2);
-      if (num === 0) {
-        randNumPoliteness = 0;
-      } else {
-        randNumPoliteness = 2;
-      }
-    } else if (!casualPoliteness && politePoliteness && formalPoliteness) {
-      randNumPoliteness = Math.floor(Math.random() * 2) + 1;
-    } else if (!casualPoliteness && !politePoliteness && !formalPoliteness) {
-      setCasualPoliteness(true);
-    }
+    randNumPoliteness = getTensePoliteness({
+      opt1: casualPoliteness,
+      opt2: politePoliteness,
+      opt3: formalPoliteness,
+      randNum: randNumPoliteness,
+      setDefault: setCasualPoliteness,
+    });
 
     setSelectedVerb(VERBS[randNumVerb]);
     setSelectedTense(VERBS[randNumVerb].vocabulary[randNumTense]);
@@ -114,23 +93,22 @@ export default function VerbsPage() {
 
     if (e.target.value === selectedPoliteness?.conjugation) {
       setRightAnswer(true);
-      console.log("Correct");
     } else {
       setRightAnswer(false);
-      console.log("Incorrect");
     }
     e.target.blur();
   };
 
   return (
     <PageWrapper>
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <motion.div variants={verbVariants} initial="hidden" animate="visible">
         {selectedVerb !== undefined && (
           <motion.div
             key={selectedVerb.verb}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            variants={verbVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
             className="flex flex-col items-center text-center"
           >
             <span className="text-6xl font-bold">{selectedVerb.verb}</span>
@@ -145,9 +123,10 @@ export default function VerbsPage() {
           {selectedPoliteness !== undefined && selectedTense !== undefined && (
             <motion.span
               key={selectedTense.tense}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              variants={verbVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
               className="font-bold text-2xl capitalize"
             >
               {selectedPoliteness.politenessLevel} {selectedTense.tense}
@@ -166,6 +145,7 @@ export default function VerbsPage() {
           rightAnswer={rightAnswer}
           answer={selectedPoliteness?.conjugation}
           setChange={setChangeVerb}
+          title="Verb"
         />
       </motion.div>
 

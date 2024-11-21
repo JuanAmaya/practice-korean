@@ -8,6 +8,7 @@ type AnswerTitleProps = {
 
 type ResultsProps = {
   setChange: React.Dispatch<React.SetStateAction<number>>;
+  title: string;
 } & AnswerTitleProps;
 
 const resultsVariants = {
@@ -40,6 +41,7 @@ export default function Results({
   rightAnswer,
   answer,
   setChange,
+  title,
 }: ResultsProps) {
   return (
     <AnimatePresence>
@@ -56,7 +58,7 @@ export default function Results({
           animate="visible"
           exit="hidden"
         >
-          <Button setChange={setChange} />
+          <Button setChange={setChange} title={title} />
         </motion.div>
       )}
     </AnimatePresence>

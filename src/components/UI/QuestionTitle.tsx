@@ -22,7 +22,7 @@ export default function QuestionTitle({
 }: QuestionTitleProps) {
   return (
     <motion.span
-      className="flex justify-center text-center text-6xl font-bold pb-28 capitalize"
+      className="flex justify-center text-center text-6xl font-bold pb-20 capitalize"
       variants={questionVariants}
       initial="hidden"
       animate="visible"

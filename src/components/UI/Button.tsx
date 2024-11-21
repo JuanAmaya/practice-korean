@@ -1,8 +1,9 @@
 type ButtonProps = {
   setChange: React.Dispatch<React.SetStateAction<number>>;
+  title: string;
 };
 
-export default function Button({ setChange }: ButtonProps) {
+export default function Button({ setChange, title }: ButtonProps) {
   const handleNextVerb = () => {
     setChange((prev) => prev + 1);
   };
@@ -17,7 +18,7 @@ export default function Button({ setChange }: ButtonProps) {
         focus:text-whiteKRN
         "
     >
-      Next Verb
+      Next {title}
     </button>
   );
 }

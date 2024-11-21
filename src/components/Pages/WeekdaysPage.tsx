@@ -67,6 +67,7 @@ export default function WeekdaysPage() {
               : WEEKDAYS[selectedDay].dayENG
           }
           setChange={setChangeDay}
+          title="Day"
         />
       </div>
 
