@@ -43,7 +43,9 @@ export const getPureNumber = (numPassed: number) => {
 
   switch (oneFig) {
     case 0:
-      pureNumber += "영";
+      if (numPassed === 0) {
+        pureNumber += "영";
+      }
       break;
 
     case 1:
